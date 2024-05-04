@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 3000:3000
+    environment:
+      TZ: "Asia/Tokyo"
+      ENV: local
+    volumes:
+      - ./src:/home/node/src
+      - ./node_modules:/home/node/node_modules
+      - ./package.json:/home/node/package.json
+      - ./package-lock.json:/home/node/package-lock.json
+      - ./wait-for-it.sh:/home/node/wait-for-it.sh
+    restart: always
+    command: npm run start:dev
