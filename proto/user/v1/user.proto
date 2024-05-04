@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "google/type/datetime.proto";
+
+// User represents a user in the user store.
+message User {
+  string user_id = 1;
+  string name = 2;
+  google.type.DateTime created_at = 3;
+}
+
+message GetUserRequest {
+  string user_id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message PutUserRequest {
+  string user_id = 1;
+  string name = 2;
+}
+
+message PutUserResponse {
+  User user = 1;
+}
+
+message DeleteUserRequest {
+  string user_id = 1;
+}
+
+message DeleteUserResponse {}
+
+service UserStore {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+  rpc PutUser(PutUserRequest) returns (PutUserResponse) {}
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+}
