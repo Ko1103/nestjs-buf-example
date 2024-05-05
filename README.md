@@ -1,4 +1,5 @@
 # NestJS and Buf usage example for protobuf server implementation
+
 [Japanese/日本語はこちら](https://github.com/Ko1103/nestjs-buf-example/blob/main/README.japanese.md)
 
 This repository demonstrates the use of two tools. The directory structure, requirements, installation process, and how to run the application are explained below.
@@ -21,7 +22,9 @@ In this repository,
 ├── nest-cli.json
 ├── proto // proto files
 ├── src
+│   ├── posts // User posts resource
 │   ├── proto // TypeScript SDK generated from proto file
+│   ├── users // Users resource
 │   ├── users // Users resource
 │   │   ├── users.controller.ts
 │   │   ├── users.module.ts

@@ -29,6 +29,7 @@ NestJS と Buf を使った protobuf のサーバ実装例です。
 ├── nest-cli.json
 ├── proto // proto ファイル
 ├── src
+│   ├── posts // ユーザーの投稿リソース
 │   ├── proto // proto ファイルによって生成された TypeScript の sdk
 │   ├── users // ユーザーのリソース
 │   │   ├── users.controller.ts
