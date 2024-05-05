@@ -34,7 +34,7 @@ message DeleteUserRequest {
 
 message DeleteUserResponse {}
 
-service UserStore {
+service UserService {
   rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
   rpc PutUser(PutUserRequest) returns (PutUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
