@@ -1,8 +1,6 @@
 version: v1
 managed:
   enabled: true
-  go_package_prefix:
-    default: github.com/bufbuild/buf-tour/gen
 plugins:
   - plugin: buf.build/bufbuild/es:v1.9.0
     opt: target=ts
