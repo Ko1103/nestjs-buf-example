@@ -13,6 +13,7 @@ export const grpcClientOptions: ClientOptions = {
     loader: {
       includeDirs: [join(__dirname, '../proto')],
     },
+    url: '0.0.0.0:5000',
 
     // onLoadPackageDefinition: (pkg, server) => {
     //   new ReflectionService(pkg).addToServer(server);

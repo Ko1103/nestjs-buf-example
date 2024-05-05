@@ -8,7 +8,7 @@ async function bootstrap() {
   app.connectMicroservice<MicroserviceOptions>(grpcClientOptions);
 
   await app.startAllMicroservices();
-  await app.listen(3001);
-  console.log('Microservice is listening on port 3001');
+  console.log('Microservice is listening on port http://0.0.0.0:5000');
+  await app.listen(3000);
 }
 bootstrap();
