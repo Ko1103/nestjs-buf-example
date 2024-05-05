@@ -7,15 +7,28 @@ services:
       dockerfile: Dockerfile
       target: build
     ports:
-      - 3000:3000
+      - 3000:3000 # HTTP
+      - 5000:5000 # gRPC
     environment:
-      TZ: "Asia/Tokyo"
+      TZ: 'Asia/Tokyo'
       ENV: local
     volumes:
       - ./src:/home/node/src
+      - ./proto:/home/node/proto
       - ./node_modules:/home/node/node_modules
       - ./package.json:/home/node/package.json
       - ./package-lock.json:/home/node/package-lock.json
       - ./wait-for-it.sh:/home/node/wait-for-it.sh
     restart: always
     command: npm run start:dev
+
+  production-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3000 # HTTP
+      - 5001:5000 # gRPC
+    environment:
+      TZ: 'Asia/Tokyo'
+      ENV: local
