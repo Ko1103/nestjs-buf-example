@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { DateTime } from 'src/proto/google/type/datetime_pb';
+import { DateTime } from 'proto/google/type/datetime_pb';
 import { UserDto } from './dto/user.dto';
 
 @Controller('users')

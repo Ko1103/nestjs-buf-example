@@ -4,6 +4,8 @@ managed:
   go_package_prefix:
     default: github.com/bufbuild/buf-tour/gen
 plugins:
+  # Generate TypeScript code used by NestJS app
   - plugin: buf.build/bufbuild/es:v1.9.0
-    opt: target=ts
-    out: src/proto
+    opt: target=ts # Output to TypeScript
+    out: gen/es
+  # Add some plugins to generate code for other languages here...
