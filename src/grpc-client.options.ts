@@ -1,4 +1,4 @@
-import { ReflectionService } from '@grpc/reflection';
+// import { ReflectionService } from '@grpc/reflection';
 import { ClientOptions, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 
