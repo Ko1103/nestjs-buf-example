@@ -21,7 +21,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "preproto:gen": "rimraf src/proto",
     "proto:gen": "buf generate proto",
-    "proto:lint": "buf lint proto"
+    "proto:lint": "buf lint proto",
+    "proto:format": "buf format -w proto"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^1.9.0",
