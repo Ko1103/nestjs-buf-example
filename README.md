@@ -25,7 +25,6 @@ In this repository,
 │   ├── posts // User posts resource
 │   ├── proto // TypeScript SDK generated from proto file
 │   ├── users // Users resource
-│   ├── users // Users resource
 │   │   ├── users.controller.ts
 │   │   ├── users.module.ts
 │   │   ├── users.service.ts
