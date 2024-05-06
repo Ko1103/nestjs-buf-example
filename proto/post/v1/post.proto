@@ -6,12 +6,12 @@ import "google/type/datetime.proto";
 import "user/v1/user.proto";
 
 message Post {
-    string id = 1;
-    string title = 2;
-    string content = 3;
-    string user_id = 4;
-    google.type.DateTime created_at = 5;
-    google.type.DateTime updated_at = 6;
+  string id = 1;
+  string title = 2;
+  string content = 3;
+  string user_id = 4;
+  google.type.DateTime created_at = 5;
+  google.type.DateTime updated_at = 6;
 }
 
 message GetPostsRequest {
